@@ -1,6 +1,5 @@
 <?php
-/* File : Rest.inc.php
-*/
+
 class REST {
 
     public $_allow = array();
@@ -19,10 +18,18 @@ class REST {
     }
 
     public function response($data,$status){
-        $this->_code = ($status)?$status:200;
-        $this->set_headers();
-        echo $data;
-        exit;
+        $this->_code = $status;
+        $statusArr = array(
+            'code' => $status,
+            'message' => $this->get_status_message()
+        );
+
+        $response = array(
+            'status' => $statusArr,
+            'data' => $data
+        );
+
+        echo json_encode($response);
     }
 
     private function get_status_message(){
@@ -82,6 +89,7 @@ class REST {
                 break;
             case "GET":
                 $this->_request = $this->cleanInputs($_GET);
+                break;
             case "DELETE":
                 $this->_request = $this->cleanInputs($_GET);
                 break;
@@ -111,9 +119,4 @@ class REST {
         return $clean_input;
     }
 
-    private function set_headers(){
-        header("HTTP/1.1 ".$this->_code." ".$this->get_status_message());
-        header("Content-Type:".$this->_content_type);
-    }
 }
-?>
