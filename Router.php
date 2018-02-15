@@ -1,5 +1,8 @@
 <?php
 require_once("api.php");
+require_once("\MongoDB\Driver\Exception\AuthenticationException");
+require_once("\http\Exception\BadUrlException");
+require_once("\http\Exception\InvalidArgumentException");
 
 class Router
 {
@@ -17,37 +20,50 @@ class Router
         $route = $paramsArray[0] . "/" . $paramsArray[1] . ":" . (count($paramsArray) - 2);
 
         $type = $_SERVER['REQUEST_METHOD'];
-        switch($type) {
+        switch ($type) {
             case "POST":
                 switch ($route) {
-                    case 'test/test:0': return array("POST", false, array($this, "test"));
-                    case 'test/test:0': return array("POST", false, array($this, "test"));
-                    case 'test/test:0': return array("POST", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("POST", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("POST", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("POST", false, array($this, "test"));
                 }
                 break;
 
             case "GET":
                 switch ($route) {
-                    case 'test/test:0': return array("GET", false, array($this, "test"));
-                    case 'test/test:1': return array("GET", false, array($this, "test"));
-                    case 'test/test:2': return array("GET", false, array($this, "test"));
-                    case 'test/test:3': return array("GET", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("GET", false, array($this, "test"));
+                    case 'test/test:1':
+                        return array("GET", false, array($this, "test"));
+                    case 'test/test:2':
+                        return array("GET", false, array($this, "test"));
+                    case 'test/test:3':
+                        return array("GET", false, array($this, "test"));
                 }
                 break;
 
             case "DELETE":
                 switch ($route) {
-                    case 'test/test:0': return array("DELETE", false, array($this, "test"));
-                    case 'test/test:0': return array("DELETE", false, array($this, "test"));
-                    case 'test/test:0': return array("DELETE", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("DELETE", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("DELETE", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("DELETE", false, array($this, "test"));
                 }
                 break;
 
             case "PUT":
                 switch ($route) {
-                    case 'test/test:0': return array("PUT", false, array($this, "test"));
-                    case 'test/test:0': return array("PUT", false, array($this, "test"));
-                    case 'test/test:0': return array("PUT", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("PUT", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("PUT", false, array($this, "test"));
+                    case 'test/test:0':
+                        return array("PUT", false, array($this, "test"));
                 }
                 break;
 
@@ -97,21 +113,31 @@ $api = new API();
 $paramsArray = $router->processRoute();
 $func = $router->matchRoute($paramsArray);
 
-if ($func == null) {
+try {
+    if ($func == null) {
+        throw new BadUrlException();
+    } else {
+
+        array_shift($paramsArray);
+        array_shift($paramsArray);
+
+        if ($func[1]) {
+            //check auth
+            //if auth return userID
+            //else response error
+        }
+        if ($func[0] == "GET") {
+            $api->response(call_user_func($func[2], $paramsArray), 200);
+        } else {
+            $api->response(call_user_func($func[2]), 200);
+        }
+    }
+} catch (AuthenticationException $ex) {
+    $api->response('Error code 401', 401);
+} catch (BadUrlException $ex) {
     $api->response('Error code 404, Page not found', 404);
-} else {
-
-array_shift($paramsArray);
-array_shift($paramsArray);
-
-if ($func[1]) {
-    //check auth
-    //if auth return userID
-    //else response error
-}
-if ($func[0] == "GET") {
-    $api->response(call_user_func($func[2], $paramsArray), 200);
-} else {
-    $api->response(call_user_func($func[2]), 200);
-}
+} catch (InvalidArgumentException $ex) {
+    $api->response('Error code 500', 500);
+} catch (Exception $ex) {
+    $api->response('Error code 500', 500);
 }
