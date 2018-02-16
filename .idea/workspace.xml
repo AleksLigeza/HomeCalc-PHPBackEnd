@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c0afc61c-8277-4ae9-9c35-f604469bc6b3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DBConnection.php" afterPath="$PROJECT_DIR$/DBConnection.php" />
       <change beforePath="$PROJECT_DIR$/Router.php" afterPath="$PROJECT_DIR$/Router.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,40 +16,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Router.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-508">
-              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Router.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Router.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="131" column="30" lean-forward="false" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+            <state relative-caret-position="435">
+              <caret line="141" column="1" lean-forward="false" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/AuthController.php">
+      <file leaf-file-name="OperationDbModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OperationDbModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="311">
+              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+              <folding>
+                <marker date="1518820415392" expanded="true" signature="143:286" ph="INSERT INTO `operations`... " />
+                <marker date="1518820415392" expanded="true" signature="143:327" ph="INSERT INTO `operations`... " />
+                <marker date="1518820415392" expanded="true" signature="143:519" ph="INSERT INTO `operations`... " />
+                <marker date="1518820415392" expanded="true" signature="694:777" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="694:881" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="694:886" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="1226:1327" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="1226:1501" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="1697:1851" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="1697:1896" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="2440:2614" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="2440:2740" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="2440:2773" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="2440:2934" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="3169:3209" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="3169:3225" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="3169:3226" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="3537:3591" ph="DELETE FROM operations... " />
+                <marker date="1518820415392" expanded="true" signature="3543:3591" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="3802:4375" ph="UPDATE operations... " />
+                <marker date="1518820415392" expanded="true" signature="3802:4376" ph="UPDATE operations... " />
+                <marker date="1518820415392" expanded="true" signature="3802:4394" ph="UPDATE operations... " />
+                <marker date="1518820415392" expanded="true" signature="3809:4337" ph="INSERT INTO `operations`... " />
+                <marker date="1518820415392" expanded="true" signature="4592:4688" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="4592:4689" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="4592:4745" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="4592:4778" ph="SELECT * FRO... operations" />
+                <marker date="1518820415392" expanded="true" signature="4992:5154" ph="SELECT * FRO... operations" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Auth.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Auth.php">
+        <entry file="file://$PROJECT_DIR$/Auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="130">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Operation.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Operation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperationModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OperationModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -57,28 +97,8 @@
       <file leaf-file-name="DBConnection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBConnection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rest.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rest.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -89,6 +109,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>'test/test'</find>
+      <find>BeforeValidException</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,11 +120,19 @@
       <list>
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/connection.php" />
-        <option value="$PROJECT_DIR$/DBConnection.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/Rest.inc.php" />
+        <option value="$PROJECT_DIR$/CustomExceptions.php" />
+        <option value="$PROJECT_DIR$/DBConnection.php" />
+        <option value="$PROJECT_DIR$/UserModel.php" />
+        <option value="$PROJECT_DIR$/Account.php" />
+        <option value="$PROJECT_DIR$/Auth.php" />
+        <option value="$PROJECT_DIR$/UserDbModel.php" />
+        <option value="$PROJECT_DIR$/OperationModel.php" />
         <option value="$PROJECT_DIR$/Router.php" />
+        <option value="$PROJECT_DIR$/OperationDbModel.php" />
+        <option value="$PROJECT_DIR$/Operation.php" />
       </list>
     </option>
   </component>
@@ -119,10 +148,11 @@
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP on XAMPP" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="760" />
-    <option name="width" value="1167" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="913" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -140,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,12 +188,11 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SPAGameScores-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
@@ -216,20 +246,24 @@
       <workItem from="1518626187705" duration="48000" />
       <workItem from="1518626988090" duration="4200000" />
       <workItem from="1518689296233" duration="1139000" />
+      <workItem from="1518729265407" duration="5967000" />
+      <workItem from="1518737723330" duration="545000" />
+      <workItem from="1518779403844" duration="37438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22018000" />
+    <option name="totallyTimeSpent" value="65968000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="760" y="0" width="1167" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1607298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.112737924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -241,7 +275,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -258,38 +291,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/AuthController.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Auth.php" />
     <entry file="file://$PROJECT_DIR$/DBConnection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -322,22 +326,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php" />
     <entry file="file://$PROJECT_DIR$/Rest.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -362,22 +352,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php" />
     <entry file="file://$PROJECT_DIR$/Rest.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -428,20 +404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/connection.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/DBConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Controller.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/DBConnection.php" />
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -449,62 +413,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/AltoRouter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JWT/SignatureInvalidException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JWT/BeforeValidException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JWT/ExpiredException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JWT/JWT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3582">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/AltoRouter.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/UsersController.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/UserModel.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Model.php" />
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -528,50 +440,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/AuthController.php">
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Auth.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/AuthController.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php" />
+    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php" />
+    <entry file="file://$PROJECT_DIR$/JWT/ExpiredException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JWT/SignatureInvalidException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JWT/JWT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="129" column="42" lean-forward="false" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JWT/BeforeValidException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CustomExceptions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/REST.php">
+    <entry file="file://$PROJECT_DIR$/UserModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/SPAGameScores-master/Router.php">
+    <entry file="file://$PROJECT_DIR$/Account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-508">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Router.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="131" column="30" lean-forward="false" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+        <state relative-caret-position="435">
+          <caret line="141" column="1" lean-forward="false" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserDbModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <marker date="1518802403801" expanded="true" signature="142:208" ph="INSERT INTO `users`... " />
+            <marker date="1518802403801" expanded="true" signature="142:210" ph="INSERT INTO `users`... " />
+            <marker date="1518802403801" expanded="true" signature="142:216" ph="INSERT INTO `users`... " />
+            <marker date="1518802403801" expanded="true" signature="142:229" ph="INSERT INTO `users`... " />
+            <marker date="1518802403801" expanded="true" signature="142:231" ph="INSERT INTO `users`... " />
+            <marker date="1518802403801" expanded="true" signature="409:442" ph="SELECT email... users" />
+            <marker date="1518802403801" expanded="true" signature="409:443" ph="SELECT email... users" />
+            <marker date="1518802403801" expanded="true" signature="409:450" ph="SELECT * FRO... users" />
+            <marker date="1518802403801" expanded="true" signature="409:451" ph="SELECT * FRO... users" />
+            <marker date="1518802403801" expanded="true" signature="739:780" ph="SELECT * FRO... users" />
+            <marker date="1518802403801" expanded="true" signature="1069:1173" ph="UPDATE users... " />
+            <marker date="1518802403801" expanded="true" signature="1069:1174" ph="UPDATE users... " />
+            <marker date="1518802403801" expanded="true" signature="1069:1188" ph="UPDATE users... " />
+            <marker date="1518802403801" expanded="true" signature="1069:1189" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OperationModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OperationDbModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding>
+            <marker date="1518820415392" expanded="true" signature="143:286" ph="INSERT INTO `operations`... " />
+            <marker date="1518820415392" expanded="true" signature="143:327" ph="INSERT INTO `operations`... " />
+            <marker date="1518820415392" expanded="true" signature="143:519" ph="INSERT INTO `operations`... " />
+            <marker date="1518820415392" expanded="true" signature="694:777" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="694:881" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="694:886" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="1226:1327" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="1226:1501" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="1697:1851" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="1697:1896" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="2440:2614" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="2440:2740" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="2440:2773" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="2440:2934" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="3169:3209" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="3169:3225" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="3169:3226" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="3537:3591" ph="DELETE FROM operations... " />
+            <marker date="1518820415392" expanded="true" signature="3543:3591" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="3802:4375" ph="UPDATE operations... " />
+            <marker date="1518820415392" expanded="true" signature="3802:4376" ph="UPDATE operations... " />
+            <marker date="1518820415392" expanded="true" signature="3802:4394" ph="UPDATE operations... " />
+            <marker date="1518820415392" expanded="true" signature="3809:4337" ph="INSERT INTO `operations`... " />
+            <marker date="1518820415392" expanded="true" signature="4592:4688" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="4592:4689" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="4592:4745" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="4592:4778" ph="SELECT * FRO... operations" />
+            <marker date="1518820415392" expanded="true" signature="4992:5154" ph="SELECT * FRO... operations" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
           <folding />
         </state>
       </provider>
