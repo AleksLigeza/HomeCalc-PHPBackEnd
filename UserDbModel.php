@@ -44,4 +44,28 @@ class UserDbModel
         $db->Execute($sql);
         return $user;
     }
+
+    public static function GetAllUsers()
+    {
+        $sql = "SELECT * FROM users WHERE `user_id` <> 1";
+        $dbConnection = new DBConnection();
+        $result = $dbConnection->Select($sql);
+        if (count($result) == 0) {
+            return null;
+        }
+        return $result;
+    }
+
+    public static function DeleteUserById($id)
+    {
+        $dbConnection = new DBConnection();
+
+        $sql = "DELETE FROM users WHERE `user_id`= $id";// AND `userId` = $userId";
+        $result = $dbConnection->Execute($sql);
+
+        $sql = "DELETE FROM operations WHERE `userId` = $id";
+        $dbConnection->Execute($sql);
+
+        return $result;
+    }
 }

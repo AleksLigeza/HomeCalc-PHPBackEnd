@@ -72,7 +72,7 @@ class OperationDbModel
                 ORDER BY `date` DESC, createDate DESC
                 LIMIT 10 OFFSET $skip";
         $dbConnection = new DBConnection();
-        print_r($sql);
+
         $result = $dbConnection->Select($sql);
 
         return $result;
@@ -131,7 +131,7 @@ class OperationDbModel
     public static function GetCycleOperations($userID, $cycleId) {
         $sql = "SELECT * 
                 FROM operations 
-                WHERE userId = '$userID' AND cycleId = '$cycleId'
+                WHERE userId = $userID AND cycleId = $cycleId
                 ORDER BY `date` DESC, createDate DESC";
         $dbConnection = new DBConnection();
         $result = $dbConnection->Select($sql);

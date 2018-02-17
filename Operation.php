@@ -6,8 +6,9 @@ class Operation
 {
 
     // POST -- /operations/create
-    public function CreateOperation($userID)
+    public function CreateOperation($paramsArray)
     {
+        $userID = $paramsArray[0];
         $data = json_decode(file_get_contents('php://input'), true);
         $operation = new OperationModel($userID, $data);
         return OperationDbModel::AddOperation($operation);
@@ -77,7 +78,7 @@ class Operation
     {
         $userID = $paramsArray[0];
         $cycleId = (int)$paramsArray[1];
-        $history = OperationDbModel::GetCycles($userID, $cycleId);
+        $history = OperationDbModel::GetCycleOperations($userID, $cycleId);
 
         return $history;
     }
@@ -114,7 +115,7 @@ class Operation
             if (!$checkIncome) {
                 $amount += $value['amount'];
             } else {
-                if ($value['income']) {
+                if ($value['income'] == '1') {
                     $amount += $value['amount'];
                 } else {
                     $amount -= $value['amount'];

@@ -60,12 +60,11 @@ class Auth
         $pass = $data["password"];
 
         $user = UserDbModel::FindUser($email);
-
         if ($user) {
             if ($user["email"] == $email && password_verify($pass, $user["password"])) {
                 return self::createToken($user["user_id"]);
             }
         }
-        throw new Exception();
+        throw new AuthException();
     }
 }

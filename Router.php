@@ -5,10 +5,6 @@ require_once("CustomExceptions.php");
 require_once("Account.php");
 require_once("Operation.php");
 
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token, Authorization');
-
 class Router
 {
     public function matchRoute($paramsArray)
@@ -20,7 +16,6 @@ class Router
         self::checkRouteParamsCount($paramsArray);
 
         $route = $paramsArray[0] . "/" . $paramsArray[1] . ":" . (count($paramsArray) - 2);
-
         $type = $_SERVER['REQUEST_METHOD'];
         switch ($type) {
             case "POST":
@@ -29,10 +24,6 @@ class Router
                         return array("POST", false, array($auth, "register"));
                     case 'auth/login:0':
                         return array("POST", false, array($auth, "login"));
-                    case 'account/changeemail:0':
-                        return array("POST", true, array($account, "changeEmail"));
-                    case 'account/changepassword:0':
-                        return array("POST", true, array($account, "changePassword"));
                     case 'operations/create:0':
                         return array("POST", true, array($operation, "createOperation"));
                 }
@@ -52,6 +43,8 @@ class Router
                         return array("GET", true, array($operation, "cycle"));
                     case 'operations/summary:0':
                         return array("GET", true, array($operation, "summary"));
+                    case 'account/getallusers:0':
+                        return array("GET", true, array($account, "getAllUsers"));
                 }
                 break;
 
@@ -59,18 +52,25 @@ class Router
                 switch ($route) {
                     case 'operations/delete:1':
                         return array("DELETE", true, array($operation, "delete"));
-                    }
+                    case 'account/delete:1':
+                        return array("DELETE", true, array($account, "delete"));
+                }
                 break;
 
             case "PUT":
                 switch ($route) {
                     case 'operations/update:0':
                         return array("PUT", true, array($operation, "update"));
-                    }
+                    case 'account/changeemail:0':
+                        return array("PUT", true, array($account, "changeEmail"));
+                    case 'account/changepassword:0':
+                        return array("PUT", true, array($account, "changePassword"));
+                    case 'account/updateuser:0':
+                        return array("PUT", true, array($account, "updateUser"));
+                }
                 break;
-
             default:
-                $this->response('Error code 404, Page not found', 404);
+                throw new BadRouteException();
                 break;
         }
     }
@@ -98,14 +98,13 @@ class Router
     }
 }
 
-$router = new Router();
-$api = new API();
-
-$paramsArray = $router->processRoute();
-$func = $router->matchRoute($paramsArray);
-
-
 try {
+    cors();
+    $router = new Router();
+    $api = new API();
+
+    $paramsArray = $router->processRoute();
+    $func = $router->matchRoute($paramsArray);
     if ($func == null) {
         throw new BadRouteException();
     } else {
@@ -121,17 +120,21 @@ try {
 
             if ($func[0] == "GET" || $func[0] == "PUT" || "DELETE") {
                 $paramsArray[0] = $userID;
-                $api->response(call_user_func($func[2], $paramsArray), 200);
+                $result = call_user_func($func[2], $paramsArray);
+                $api->response($result, 200);
             } else {
-                $api->response(call_user_func($func[2], $userID), 200);
+                $result = call_user_func($func[2], $userID);
+                $api->response($result, 200);
             }
         } else {
             array_shift($paramsArray);
 
             if ($func[0] == "GET") {
-                $api->response(call_user_func($func[2], $paramsArray), 200);
+                $result = call_user_func($func[2], $paramsArray);
+                $api->response($result, 200);
             } else {
-                $api->response(call_user_func($func[2]), 200);
+                $result = call_user_func($func[2]);
+                $api->response($result, 200);
             }
         }
     }
@@ -143,3 +146,29 @@ try {
 //} catch (Exception $ex) {
 //    $api->response('Error code 500', 500);
 //}
+
+
+function cors() {
+
+    // Allow from any origin
+    if (isset($_SERVER['HTTP_ORIGIN'])) {
+        // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
+        // you want to allow, and if so:
+        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Max-Age: 86400');    // cache for 1 day
+    }
+
+    // Access-Control headers are received during OPTIONS requests
+    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+            // may also be using PUT, PATCH, HEAD etc
+            header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+            header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+
+        exit(0);
+    }
+}
