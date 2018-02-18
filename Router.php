@@ -5,6 +5,8 @@ require_once("CustomExceptions.php");
 require_once("Account.php");
 require_once("Operation.php");
 
+header('Access-Control-Allow-Origin: *');
+
 class Router
 {
     public function matchRoute($paramsArray)
@@ -154,9 +156,12 @@ function cors() {
     if (isset($_SERVER['HTTP_ORIGIN'])) {
         // Decide if the origin in $_SERVER['HTTP_ORIGIN'] is one
         // you want to allow, and if so:
-        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
         header('Access-Control-Allow-Credentials: true');
         header('Access-Control-Max-Age: 86400');    // cache for 1 day
+        header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+
+        header('Accept-Encoding:gzip, deflate, br');
+        header('Accept-Language:pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7,en-GB;q=0.6');
     }
 
     // Access-Control headers are received during OPTIONS requests

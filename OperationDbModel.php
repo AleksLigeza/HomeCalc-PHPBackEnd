@@ -1,5 +1,5 @@
 <?php
-require_once ("OperationModel.php");
+require_once("OperationModel.php");
 
 class OperationDbModel
 {
@@ -14,7 +14,8 @@ class OperationDbModel
         return $res;
     }
 
-    public static function GetOperations($userID, $skip) {
+    public static function GetOperations($userID, $skip)
+    {
         $sql = "SELECT * 
                 FROM operations 
                 WHERE userId = '$userID' AND cycleId <> 0
@@ -26,7 +27,8 @@ class OperationDbModel
         return $result;
     }
 
-    public static function GetMonthOperations($userID, $query_date, $income) {
+    public static function GetMonthOperations($userID, $query_date, $income)
+    {
         $dateSince = date('Y-m-01', strtotime($query_date));
         $dateTo = date('Y-m-t', strtotime($query_date));
 
@@ -41,7 +43,8 @@ class OperationDbModel
         return $result;
     }
 
-    public static function GetAllOperations($userID) {
+    public static function GetAllOperations($userID)
+    {
         $sql = "SELECT * 
                 FROM operations 
                 WHERE userId = '$userID' AND cycleId <> 0
@@ -52,14 +55,15 @@ class OperationDbModel
         return $result;
     }
 
-    public static function GetOperationsWithFilters($paramsArray) {
+    public static function GetOperationsWithFilters($paramsArray)
+    {
         $userID = $paramsArray[0];
         $skip = (int)$paramsArray[1];
         $amountFrom = (int)$paramsArray[2];
         $amountTo = (int)$paramsArray[3];
-        $description = $paramsArray[4];
-        $dateSince =  date( "Y-m-d H:i:s", strtotime($paramsArray[5]));
-        $dateTo =  date( "Y-m-d H:i:s", strtotime($paramsArray[6]));
+        $description = strtolower($paramsArray[4]);
+        $dateSince = date("Y-m-d H:i:s", strtotime($paramsArray[5]));
+        $dateTo = date("Y-m-d H:i:s", strtotime($paramsArray[6]));
         $type = (int)$paramsArray[7];
 
         $sql = "SELECT * 
@@ -67,14 +71,24 @@ class OperationDbModel
                 WHERE userId = '$userID'  AND cycleId <> 0
                       AND `date` >= '$dateSince' AND `date` <= '$dateTo'
                       AND `amount` >= $amountFrom AND `amount` <= $amountTo 
-                      AND (`description` LIKE '%$description%' OR '$description' = '0null')
                       AND (`income` = $type OR $type = '0null')
                 ORDER BY `date` DESC, createDate DESC
                 LIMIT 10 OFFSET $skip";
         $dbConnection = new DBConnection();
 
-        $result = $dbConnection->Select($sql);
+        $res = $dbConnection->Select($sql);
 
+        $result = array();
+        foreach ($res as $value) {
+            $temp = $value['description'];
+            $temp = str_replace(array('ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż', 'Ą', 'Ć', 'Ę', 'Ł', 'Ń', 'Ó', 'Ś', 'Ź', 'Ż'),
+                array('a', 'c', 'e', 'l', 'n', 'o', 's', 'z', 'z', 'a', 'c', 'e', 'l', 'n', 'o', 's', 'z', 'z'), $temp);
+            $temp = strtolower($temp);
+
+            if (strpos($temp, $description) !== false || $description === "0null") {
+                array_push($result, $value);
+            }
+        }
         return $result;
     }
 
@@ -116,7 +130,8 @@ class OperationDbModel
         return $result;
     }
 
-    public static function GetCycles($userID, $skip) {
+    public static function GetCycles($userID, $skip)
+    {
         $sql = "SELECT * 
                 FROM operations 
                 WHERE userId = '$userID' AND cycleId = 0
@@ -128,7 +143,8 @@ class OperationDbModel
         return $result;
     }
 
-    public static function GetCycleOperations($userID, $cycleId) {
+    public static function GetCycleOperations($userID, $cycleId)
+    {
         $sql = "SELECT * 
                 FROM operations 
                 WHERE userId = $userID AND cycleId = $cycleId
