@@ -71,14 +71,13 @@ class OperationDbModel
                 WHERE userId = '$userID'  AND cycleId <> 0
                       AND `date` >= '$dateSince' AND `date` <= '$dateTo'
                       AND `amount` >= $amountFrom AND `amount` <= $amountTo 
-                      AND (`income` = $type OR $type = '0null')
-                ORDER BY `date` DESC, createDate DESC
-                LIMIT 10 OFFSET $skip";
+                      AND (`income` = 0 AND $type = 2 OR `income` = 1 AND $type = 1 OR $type = '0')
+                ORDER BY `date` DESC, createDate DESC";
         $dbConnection = new DBConnection();
 
         $res = $dbConnection->Select($sql);
 
-        $result = array();
+        $filter = array();
         foreach ($res as $value) {
             $temp = $value['description'];
             $temp = str_replace(array('ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż', 'Ą', 'Ć', 'Ę', 'Ł', 'Ń', 'Ó', 'Ś', 'Ź', 'Ż'),
@@ -86,9 +85,15 @@ class OperationDbModel
             $temp = strtolower($temp);
 
             if (strpos($temp, $description) !== false || $description === "0null") {
-                array_push($result, $value);
+                array_push($filter, $value);
             }
         }
+
+        $result = array();
+        for($i = $skip; $i<count($filter) && $i < $skip + 10; $i++) {
+            array_push($result, $filter[$i]);
+        }
+
         return $result;
     }
 
